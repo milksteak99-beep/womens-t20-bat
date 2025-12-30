@@ -258,17 +258,30 @@ def calculate_feet_movement_by_line_length(df):
     return pd.DataFrame(results)
 
 def calculate_dismissal_by_group(df, group_column, include_runout=True):
-    """Calculate dismissal frequency by a group column"""
+    """Calculate dismissal counts by a group column with Balls faced"""
     if df is None or len(df) == 0 or 'dismissalType' not in df.columns:
         return pd.DataFrame()
     
     groups = df[group_column].dropna().unique()
     
-    # Filter dismissal types
+    # Define standard dismissal types in desired order (excluding Run Out for bowler-wise)
     if include_runout:
-        dismissal_types = [d for d in df['dismissalType'].dropna().unique() if d and d != '']
+        standard_dismissals = ['Lbw', 'Bowled', 'Caught', 'Stumped', 'Caught and Bowled', 'Run Out']
     else:
-        dismissal_types = [d for d in df['dismissalType'].dropna().unique() if d and d != '' and d != 'Run Out']
+        standard_dismissals = ['Lbw', 'Bowled', 'Caught', 'Stumped', 'Caught and Bowled']
+    
+    # Get dismissal types that exist in the data
+    existing_dismissals = [d for d in df['dismissalType'].dropna().unique() if d and d != '']
+    
+    # Map variations to standard names
+    dismissal_mapping = {
+        'Caught': ['Caught', 'CaughtSub', 'Caught Out'],
+        'Lbw': ['Lbw', 'LBW'],
+        'Bowled': ['Bowled'],
+        'Stumped': ['Stumped'],
+        'Caught and Bowled': ['Caught and Bowled'],
+        'Run Out': ['Run Out']
+    }
     
     results = []
     for group in groups:
@@ -277,9 +290,23 @@ def calculate_dismissal_by_group(df, group_column, include_runout=True):
             row = {group_column: group}
             total_balls = len(group_df)
             
-            for dismissal in dismissal_types:
-                dismissal_count = len(group_df[group_df['dismissalType'] == dismissal])
-                row[dismissal] = f"{(dismissal_count / total_balls * 100):.2f}%" if total_balls > 0 else "0.00%"
+            # Add Balls column first
+            row['Balls'] = total_balls
+            
+            # Count each dismissal type
+            for dismissal_type in standard_dismissals:
+                if not include_runout and dismissal_type == 'Run Out':
+                    continue
+                    
+                # Get all variations of this dismissal type
+                variations = dismissal_mapping.get(dismissal_type, [dismissal_type])
+                
+                # Count dismissals matching any variation
+                count = 0
+                for variation in variations:
+                    count += len(group_df[group_df['dismissalType'] == variation])
+                
+                row[dismissal_type] = count
             
             results.append(row)
     
