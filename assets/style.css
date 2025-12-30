@@ -1,0 +1,425 @@
+/* Dark Theme Styling for Women's T20 Batting Analysis App */
+
+/* Global Styles */
+.stApp {
+    background-color: #0f172a;
+    color: #f8fafc;
+}
+
+/* Main Header */
+.main-header {
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #3b82f6;
+}
+
+.main-header h1 {
+    color: #f8fafc;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+/* Navigation Buttons */
+.nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+.nav-button, .nav-button-active {
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.nav-button {
+    background-color: #1e293b;
+    color: #94a3b8;
+    border: 1px solid #334155;
+}
+
+.nav-button:hover {
+    background-color: #334155;
+    color: #f8fafc;
+}
+
+.nav-button-active {
+    background-color: #1e40af;
+    color: #f8fafc;
+    border: 2px solid #3b82f6;
+}
+
+/* Batter Info Box */
+.batter-info {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 1px solid #3b82f6;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.batter-info h2 {
+    color: #f8fafc;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.batter-info p {
+    color: #94a3b8;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Tables */
+.table-container {
+    overflow-x: auto;
+    margin: 1rem 0;
+    border-radius: 8px;
+    border: 1px solid #334155;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    background-color: #1e293b;
+}
+
+.styled-table thead tr {
+    background-color: #0f172a;
+    color: #f8fafc;
+    text-align: left;
+}
+
+.styled-table th {
+    padding: 12px 15px;
+    font-weight: 600;
+    border-bottom: 2px solid #3b82f6;
+    white-space: nowrap;
+}
+
+.styled-table th .sort-arrow {
+    color: #64748b;
+    margin-left: 5px;
+    font-size: 0.8rem;
+}
+
+.styled-table td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #334155;
+    color: #e2e8f0;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #334155;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #1e293b;
+}
+
+.styled-table tbody tr:nth-of-type(odd) {
+    background-color: #0f172a;
+}
+
+/* Effective Metrics Colors */
+.positive-value {
+    color: #4ade80 !important;
+    font-weight: 600;
+}
+
+.negative-value {
+    color: #f87171 !important;
+    font-weight: 600;
+}
+
+/* Metrics Note Box */
+.metrics-note {
+    background-color: #1e293b;
+    border-left: 4px solid #3b82f6;
+    border-radius: 0 8px 8px 0;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 0.85rem;
+}
+
+.metrics-note p {
+    margin: 0.3rem 0;
+    color: #cbd5e1;
+}
+
+.metrics-note .note-sub {
+    color: #94a3b8;
+    font-style: italic;
+    margin-top: 0.8rem;
+}
+
+/* Info Note */
+.info-note {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    margin: 1rem 0;
+    color: #94a3b8;
+}
+
+/* Introduction Page */
+.intro-container {
+    text-align: center;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e2e8f0;
+}
+
+.intro-text strong {
+    color: #60a5fa;
+}
+
+.intro-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+    margin: 2rem 0;
+}
+
+.developer-section {
+    margin-top: 2rem;
+}
+
+.developer-text {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+}
+
+/* Social Links */
+.social-links-home {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-link-home {
+    color: #94a3b8;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-link-home:hover {
+    color: #3b82f6;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid #334155;
+}
+
+.footer-text {
+    color: #64748b;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.social-link {
+    color: #64748b;
+    transition: color 0.2s ease;
+}
+
+.social-link:hover {
+    color: #3b82f6;
+}
+
+/* Coming Soon Page */
+.coming-soon-container {
+    text-align: center;
+    padding: 4rem 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.coming-soon-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.coming-soon-title {
+    color: #f8fafc;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.coming-soon-text {
+    color: #3b82f6;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.coming-soon-subtext {
+    color: #94a3b8;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Instruction Box */
+.instruction-box {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.instruction-box h3 {
+    color: #f8fafc;
+    margin: 0 0 1rem 0;
+}
+
+.instruction-box p {
+    color: #94a3b8;
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+/* Color Legend */
+.color-legend {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0.5rem 0;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+}
+
+.legend-text {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+/* Sidebar Styling */
+.css-1d391kg, .css-1lcbmhc {
+    background-color: #1e293b;
+}
+
+/* Streamlit Widget Overrides */
+.stSelectbox > div > div {
+    background-color: #1e293b;
+    border-color: #334155;
+}
+
+.stMultiSelect > div > div {
+    background-color: #1e293b;
+    border-color: #334155;
+}
+
+.stSlider > div > div > div {
+    background-color: #3b82f6;
+}
+
+.stButton > button {
+    background-color: #1e40af;
+    color: #f8fafc;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.stButton > button:hover {
+    background-color: #2563eb;
+}
+
+/* Plotly Chart Background */
+.js-plotly-plot .plotly .bg {
+    fill: transparent !important;
+}
+
+/* DataTable Styling */
+.dataframe {
+    background-color: #1e293b !important;
+}
+
+.dataframe th {
+    background-color: #0f172a !important;
+    color: #f8fafc !important;
+}
+
+.dataframe td {
+    background-color: #1e293b !important;
+    color: #e2e8f0 !important;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .nav-container {
+        flex-direction: column;
+    }
+    
+    .styled-table {
+        font-size: 0.8rem;
+    }
+    
+    .styled-table th, .styled-table td {
+        padding: 8px 10px;
+    }
+}
