@@ -1,12 +1,10 @@
 # Women's T20s: Batting Analysis
 
-A comprehensive Streamlit web application for analyzing ball-by-ball batting data in women's T20 cricket matches.
+A web app launched via Streamlit for detailed analysis of batters in women's T20s based on a ball-by-ball dataset of 1,98,787 deliveries.
 
-```
 LIVE APP: https://womens-t20-bat.streamlit.app
 The app can be directly accessed and used from the link above.
 No installation required.
-```
 
 
 ## Features
@@ -75,6 +73,7 @@ wt20-bat/
    ```
 4. Place your `wt20.csv` data file in the `data/` folder
 
+```
 ## Data Requirements
 
 Your CSV file should contain the following columns:
@@ -87,6 +86,7 @@ Your CSV file should contain the following columns:
 - `shot_type`, `shot_angle`, `shot_magnitude`, `fielding_position`
 - `foot`, `runs_scored`, `is_wicket`
 - `timestamp`, `competition`
+```
 
 ## Key Metrics
 
