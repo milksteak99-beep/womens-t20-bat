@@ -2,12 +2,12 @@
 
 A comprehensive Streamlit web application for analyzing ball-by-ball batting data in women's T20 cricket matches.
 
-┌──────────────────────────────────────────────────────────────────────────────┐
-│  LIVE APP: https://womens-t20-bat.streamlit.app                              │
-│                                                                              │
-│  The app can be directly accessed and used from the link above.              │
-│  No installation required.                                                   │
-└──────────────────────────────────────────────────────────────────────────────┘
+```
+LIVE APP: https://womens-t20-bat.streamlit.app
+The app can be directly accessed and used from the link above.
+No installation required.
+```
+
 
 ## Features
 
